@@ -4,43 +4,57 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:background="#ffff615f">
-
-    <TextView android:text="Is this party hot?" android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="45sp"
-        android:textAlignment="center"
-        android:id="@+id/textView"
-        android:layout_gravity="center"
-        android:gravity="center_vertical"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+    android:background="@drawable/background">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="FIRE!"
         android:id="@+id/yesButton"
-        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp" />
+        android:background="#ffe41310"
+        android:textSize="20sp" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hot"
         android:id="@+id/kindaButton"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/yesButton"
+        android:layout_alignLeft="@+id/yesButton"
+        android:layout_alignStart="@+id/yesButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="77dp"
+        android:layout_gravity="center"
+        android:background="#fffff60d"
+        android:textSize="20sp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mild"
         android:id="@+id/noButton"
-        android:layout_below="@+id/kindaButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/kindaButton"
+        android:layout_alignStart="@+id/kindaButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="44dp"
+        android:background="#ff35b52e"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:background="@drawable/header_text"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
