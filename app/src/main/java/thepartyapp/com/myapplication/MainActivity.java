@@ -1,10 +1,12 @@
 package thepartyapp.com.myapplication;
 
 import android.content.IntentSender;
+import android.content.pm.ActivityInfo;
 import android.location.Location;
 import android.location.LocationListener;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.format.Time;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -42,6 +44,8 @@ public class MainActivity extends ActionBarActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTheme(android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         // Enable Local Datastore.
 //        Parse.enableLocalDatastore(this);
@@ -82,6 +86,9 @@ public class MainActivity extends ActionBarActivity implements
             }
         };
 
+        // Get Time
+        Time now = new Time();
+        now.setToNow();
 
         // Sets up buttons and collects user input
         Button yesButton = (Button) findViewById(R.id.yesButton);
@@ -92,7 +99,7 @@ public class MainActivity extends ActionBarActivity implements
                 rowObject.put("isHot", "yes");
                 rowObject.put("location", currentLocation);
                 rowObject.saveInBackground();
-                Toast.makeText(MainActivity.this, "Awesome! Continue to have a great time!", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Awesome! Continue to have a great time!", Toast.LENGTH_SHORT).show();
             }
         });
         Button kindaButton = (Button) findViewById(R.id.kindaButton);
@@ -103,7 +110,7 @@ public class MainActivity extends ActionBarActivity implements
                 rowObject.put("isHot", "kinda");
                 rowObject.put("location", currentLocation);
                 rowObject.saveInBackground();
-                Toast.makeText(MainActivity.this, "It will get better...", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "It will get better...", Toast.LENGTH_SHORT).show();
             }
         });
         Button noButton = (Button) findViewById(R.id.noButton);
@@ -114,7 +121,7 @@ public class MainActivity extends ActionBarActivity implements
                 rowObject.put("isHot", "no");
                 rowObject.put("location", currentLocation);
                 rowObject.saveInBackground();
-                Toast.makeText(MainActivity.this, "Thanks for your honesty.", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Thanks for your honesty.", Toast.LENGTH_SHORT).show();
             }
         });
 

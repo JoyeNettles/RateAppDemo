@@ -12,12 +12,13 @@
         android:text="FIRE!"
         android:id="@+id/yesButton"
         android:background="#ffe41310"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:layout_above="@+id/kindaButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
 
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:padding="2dp" />
 
     <Button
         android:layout_width="match_parent"
@@ -26,10 +27,11 @@
         android:id="@+id/kindaButton"
         android:layout_gravity="center"
         android:background="#fffff60d"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:layout_above="@+id/noButton"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:padding="2dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -43,7 +45,8 @@
         android:layout_alignParentRight="true"
         android:layout_marginBottom="44dp"
         android:background="#ff35b52e"
-        android:textSize="20sp" />
+        android:textSize="30sp"
+        android:padding="2dp" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -55,6 +58,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="73dp"
         android:layout_alignRight="@+id/yesButton"
-        android:layout_alignEnd="@+id/yesButton" />
+        android:layout_alignEnd="@+id/yesButton"
+        android:layout_above="@+id/yesButton" />
 
 </RelativeLayout>
