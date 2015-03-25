@@ -99,7 +99,7 @@ public class MainActivity extends ActionBarActivity implements
                 rowObject.put("isHot", "yes");
                 rowObject.put("location", currentLocation);
                 rowObject.saveInBackground();
-                Toast.makeText(MainActivity.this, "Awesome! Continue to have a great time!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Continue to have a great time!", Toast.LENGTH_SHORT).show();
             }
         });
         Button kindaButton = (Button) findViewById(R.id.kindaButton);
@@ -110,7 +110,7 @@ public class MainActivity extends ActionBarActivity implements
                 rowObject.put("isHot", "kinda");
                 rowObject.put("location", currentLocation);
                 rowObject.saveInBackground();
-                Toast.makeText(MainActivity.this, "It will get better...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Thanks for your response!", Toast.LENGTH_SHORT).show();
             }
         });
         Button noButton = (Button) findViewById(R.id.noButton);
@@ -121,7 +121,7 @@ public class MainActivity extends ActionBarActivity implements
                 rowObject.put("isHot", "no");
                 rowObject.put("location", currentLocation);
                 rowObject.saveInBackground();
-                Toast.makeText(MainActivity.this, "Thanks for your honesty.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "We appreciate your honesty!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -184,10 +184,10 @@ public class MainActivity extends ActionBarActivity implements
     @Override
     protected void onPause() {
         super.onPause();
-        if (mGoogleApiClient.isConnected()) {
-            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, (com.google.android.gms.location.LocationListener) mLocationListener);
-            mGoogleApiClient.disconnect();
-        }
+//        if (mGoogleApiClient.isConnected()) {
+//            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, (com.google.android.gms.location.LocationListener) mLocationListener);
+//            mGoogleApiClient.disconnect();
+//        }
     }
 
     @Override
