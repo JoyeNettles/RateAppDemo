@@ -184,10 +184,10 @@ public class MainActivity extends ActionBarActivity implements
     @Override
     protected void onPause() {
         super.onPause();
-//        if (mGoogleApiClient.isConnected()) {
-//            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, (com.google.android.gms.location.LocationListener) mLocationListener);
-//            mGoogleApiClient.disconnect();
-//        }
+        if (mGoogleApiClient.isConnected()) {
+            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, (com.google.android.gms.location.LocationListener) mLocationListener);
+            mGoogleApiClient.disconnect();
+        }
     }
 
     @Override
